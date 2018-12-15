@@ -4,6 +4,7 @@ BADmazon is a full self-service shop for all your shopping needs! Please enjoy u
 # Required to work!
 * Please populate the database in MySql with the provided BADmazon_products.csv file.
 * Occasionally all of the data from that file does not import into MySql and the last item gets dropped so you must run the provided "IMPORT INTO" code in the schema.sql.
+* User must do "npm install" to install all the required dependencies
 
 ### Overview
 
