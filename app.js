@@ -41,7 +41,7 @@ function start() {
                 message: "How many do you want to buy?"
             }
         ]).then(function (res) {
-
+            res.quantity = parseInt(res.quantity);
             if (res.itemID == 25) {
                 console.log("Stop it! You can't afford to be that Stuntastic!");
                 start();
@@ -55,6 +55,7 @@ function start() {
                     function (err, data) {
                         if (data[0].stock_quantity >= res.quantity) {
                             data[0].stock_quantity -= res.quantity;
+                            
 
                             connection.query("UPDATE products SET ? WHERE ?",
                                 [
